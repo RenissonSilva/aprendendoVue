@@ -13,8 +13,13 @@
 		<h2 v-else>Status é false</h2><br>
 		<!-- Pegando informações do objeto -->
 		<h1>Info do personagem</h1>
-		<h2>Nome: {{personagem.nome}}</h2>
-		<h2>Nome: {{personagem.idade}}</h2>
+		<ul>
+			<li v-for="(char,index) in personagem">
+				Índice : {{index}}<br>
+				Nome : {{char.nome}}<br>
+				Idade : {{char.idade}}<br><br>
+			</li>
+		</ul>
 
 	</div>
 
@@ -27,10 +32,10 @@
 
 				status:true,
 
-				personagem:{
-					nome: "Gon Freecs",
-					idade: "11"
-				}
+				personagem:[
+					{ nome: "Gon Freecs",idade: "11" },
+					{ nome: "Killua Zaoldyeck",idade: "12" },
+				]
 			}
 		});
 	</script>
