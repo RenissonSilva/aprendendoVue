@@ -7,6 +7,9 @@
 <body>
 	<div id="app">
 		<h1>{{texto}}</h1>
+
+		<h2>{{arrayTeste}}</h2>
+
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -14,7 +17,11 @@
 		var app = new Vue({
 			el: "#app",
 			data: {
-				texto: "Começando com Vue!"
+				texto: "Começando com Vue!",
+				arrayTeste:[
+					'a',
+					'b'
+				]
 			}
 		});
 	</script>
