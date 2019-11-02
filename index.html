@@ -9,8 +9,13 @@
 		<!-- Impressão de variável simples -->
 		<h1>{{texto}}</h1>
 		<!-- Condicional, avalia se status é true ou false -->
-		<h2 v-if="status">{{arrayTeste}}</h2>
-		<h2 v-else>Status é false</h2>
+		<h2 v-if="status">{{personagem}}</h2>
+		<h2 v-else>Status é false</h2><br>
+		<!-- Pegando informações do objeto -->
+		<h1>Info do personagem</h1>
+		<h2>Nome: {{personagem.nome}}</h2>
+		<h2>Nome: {{personagem.idade}}</h2>
+
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -19,12 +24,13 @@
 			el: "#app",
 			data: {
 				texto: "Começando com Vue!",
-				
+
 				status:true,
-				arrayTeste:[
-					'a',
-					'b'
-				]
+
+				personagem:{
+					nome: "Gon Freecs",
+					idade: "11"
+				}
 			}
 		});
 	</script>
